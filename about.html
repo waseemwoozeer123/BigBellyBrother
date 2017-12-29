@@ -10,21 +10,41 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/menu.css">
       
-    <!-- Including the Lobster font from Google's Font Directory to make the menu buttery -mmmMM yummy! -->
+    <!-- Including the Lobster font from Google's font Directory to make the menu buttery -mmmMM yummy! -->
      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
         
         <!-- Enabling HTML5 support for Internet Explorer -->
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        
+    <script language="JavaScript">
+     function getDaysUntilBigBellyBrotherFestival() {
+    var oneMinute = 60 * 1000
+    var oneHour = oneMinute * 60
+    var oneDay = oneHour * 24
+    var today = new Date()
+    var nextBBB = new Date()
+    nextBBB.setMonth(03)
+    nextBBB.setDate(25)
+    if (today.getMonth() == 11 && today.getDate() > 25) {
+        nextBBB.setFullYear(nextBBB.getFullYear() + 1)
+    }
+    var diff = nextBBB.getTime() - today.getTime()
+    diff = Math.floor(diff/oneDay)
+    return diff
+	}
+	</script>
+	
 </head>
 
 <body>
 
   <header class="header">
   <h1>Big Belly Brother</h1>
-  <h2>Leicester Unofficial Food Blog</h2>
+  <img src="img/social/facebook.png"><img src="img/social/insta.png"><img src="img/social/twitter.png"><img src="img/social/snap.png">
   <br/>
+  
     <nav>
             <ul class="fancyNav">
                 <li id="home"><a href="index.html">Home</a></li>
@@ -34,11 +54,13 @@
                 <li id="contact"><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
-        
+     <script language="JavaScript">
+     var header = "You have <I>" + getDaysUntilBigBellyBrotherFestival()  + "</I> "
+	 header += "days until the Big Belly Brother Festival 2018."
+	 document.write(header)
+	</script>   
   </header>
-  
-    
-      
+     
 
  <main class="main columns">
   <section class="column main-column">
